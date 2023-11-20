@@ -555,7 +555,6 @@ require('mason-lspconfig').setup()
 local servers = {
   -- clangd = {},
   -- gopls = {},
-  -- pyright = {},
   -- rust_analyzer = {},
   -- tsserver = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
@@ -564,6 +563,38 @@ local servers = {
     Lua = {
       workspace = { checkThirdParty = false },
       telemetry = { enable = false },
+    },
+  },
+   pyright = {
+    python = {
+      analysis = {
+        useLibraryCodeForTypes = true,
+        diagnosticSeverityOverrides = {
+          reportGeneralTypeIssues = "none",
+          reportOptionalMemberAccess = "none",
+          reportOptionalSubscript = "none",
+          reportPrivateImportUsage = "none",
+        },
+        autoImportCompletions = false,
+      },
+      linting = {pylintEnabled = false}
+    }
+  },
+  pylsp = {
+    pylsp = {
+      builtin = {
+        installExtraArgs = {'flake8', 'pycodestyle', 'pydocstyle', 'pyflakes', 'pylint', 'yapf'},
+      },
+      plugins = {
+        jedi_completion = { enabled = false },
+        rope_completion = { enabled = false },
+        flake8 = { enabled = false },
+        pyflakes = { enabled = false },
+        pycodestyle = {
+          ignore = {'E226', 'E266', 'E302', 'E303', 'E304', 'E305', 'E402', 'C0103', 'W0104', 'W0621', 'W391', 'W503', 'W504'},
+          maxLineLength = 99,
+        },
+      },
     },
   },
 }
