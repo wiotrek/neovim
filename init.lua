@@ -575,9 +575,14 @@ local servers = {
           reportOptionalSubscript = "none",
           reportPrivateImportUsage = "none",
         },
-        autoImportCompletions = false,
+        autoImportCompletions = true,
+        autoSearchPaths = true,
+        diagnosticMode = "workspace", -- openFilesOnly, workspace
+        typeCheckingMode = "basic", -- off, basic, strict
       },
-      linting = {pylintEnabled = false}
+      linting = {
+        pylintEnabled = false
+      }
     }
   },
   pylsp = {
@@ -586,7 +591,7 @@ local servers = {
         installExtraArgs = {'flake8', 'pycodestyle', 'pydocstyle', 'pyflakes', 'pylint', 'yapf'},
       },
       plugins = {
-        jedi_completion = { enabled = false },
+        jedi_completion = { enabled = true },
         rope_completion = { enabled = false },
         flake8 = { enabled = false },
         pyflakes = { enabled = false },
