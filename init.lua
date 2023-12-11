@@ -578,7 +578,7 @@ local servers = {
         autoImportCompletions = true,
         autoSearchPaths = true,
         diagnosticMode = "workspace", -- openFilesOnly, workspace
-        typeCheckingMode = "basic", -- off, basic, strict
+        typeCheckingMode = "off", -- off, basic, strict
       },
       linting = {
         pylintEnabled = false
