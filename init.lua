@@ -76,6 +76,9 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  -- highlight same word on cursor
+  'RRethy/vim-illuminate',
+
   {
     'nvim-tree/nvim-tree.lua',
     dependencies = {
@@ -222,7 +225,6 @@ require('lazy').setup({
     },
     build = ':TSUpdate',
   },
-
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
