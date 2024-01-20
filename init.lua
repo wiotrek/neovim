@@ -79,6 +79,9 @@ require('lazy').setup({
   -- highlight same word on cursor
   'RRethy/vim-illuminate',
 
+  -- close html tag
+  'nvim-ts-autotag',
+
   {
     'nvim-tree/nvim-tree.lua',
     dependencies = {
