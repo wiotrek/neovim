@@ -76,6 +76,9 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  -- fill tags
+  'tpope/vim-surround',
+
   -- highlight same word on cursor
   'RRethy/vim-illuminate',
 
@@ -429,6 +432,14 @@ vim.defer_fn(function()
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
+
+    autotag = {
+      enable = true,
+      enable_rename = true,
+      enable_close = true,
+      enable_close_on_slash = true,
+      filetypes = { "html" , "xml", 'ts' },
+    },
 
     highlight = { enable = true },
     indent = { enable = true },
