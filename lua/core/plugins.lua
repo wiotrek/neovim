@@ -18,16 +18,29 @@ return require('packer').startup(function(use)
   -- theme
   use 'navarasu/onedark.nvim'
 
-  -- auto of the box
+  -- package manager
   use 'wbthomason/packer.nvim'
+
+  -- left side dictionary tree
   use 'nvim-tree/nvim-tree.lua'
+
+  -- icons
   use 'nvim-tree/nvim-web-devicons'
+  
+  -- bottom bar
   use 'nvim-lualine/lualine.nvim'
+  
+  -- code editor syntax
   use 'nvim-treesitter/nvim-treesitter'
+  
+  -- finder
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  -- code language analys
+  use 'neovim/nvim-lspconfig'
 
   -- dev plugins
 
