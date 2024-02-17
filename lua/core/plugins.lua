@@ -14,17 +14,23 @@ local packer_bootstrap = ensure_packer()
 -- install with cmd :PackerSync
 
 return require('packer').startup(function(use)
+
+  -- theme
+  use 'navarasu/onedark.nvim'
+
+  -- auto of the box
   use 'wbthomason/packer.nvim'
-  use 'ellisonleao/gruvbox.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-lualine/lualine.nvim'
   use 'nvim-treesitter/nvim-treesitter'
   use {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.0',
+    'nvim-telescope/telescope.nvim', tag = '0.1.5',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  -- dev plugins
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
