@@ -16,6 +16,7 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
   require('cmp_nvim_lsp').default_capabilities()
 )
 
+-- Lua
 require("lspconfig").lua_ls.setup {
   settings = {
     Lua = {
@@ -32,8 +33,8 @@ require("lspconfig").lua_ls.setup {
   }
 }
 
+-- Typescript
 require("lspconfig").tsserver.setup({})
-
 
 -- Python
 require("lspconfig").pyright.setup({

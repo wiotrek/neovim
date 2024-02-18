@@ -1,4 +1,3 @@
-
 -- lualine is a bottom bar
 require('lualine').setup {
   options = {

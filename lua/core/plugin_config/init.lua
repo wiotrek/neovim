@@ -18,3 +18,6 @@ require("core.plugin_config.treesitter")
 
 -- language server analys
 require("core.plugin_config.lsp_config")
+
+-- completion engine plugin
+require("core.plugin_config.nvim-cmp")
