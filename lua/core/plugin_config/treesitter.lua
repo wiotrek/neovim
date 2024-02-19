@@ -10,7 +10,7 @@ require'nvim-treesitter.configs'.setup {
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
-  sync_install = false,
+  sync_install = true,
   auto_install = true,
 
   highlight = {
@@ -26,7 +26,7 @@ require'nvim-treesitter.configs'.setup {
     enable_rename = true,
     enable_close = true,
     enable_close_on_slash = true,
-    filetypes = { "html" , "xml", 'ts' },
+    filetypes = { "html" , "xml", "ts", "js" },
   },
 
   incremental_selection = {

@@ -1,6 +1,3 @@
--- Package manager
-require("core.plugin_config.mason")
-
 -- Theme
 require("core.plugin_config.onedark")
 
@@ -24,3 +21,4 @@ require("core.plugin_config.nvim-cmp")
 
 -- rest of
 require("core.plugin_config.neodev")
+require("core.plugin_config.gitsigns")
