@@ -2,12 +2,12 @@ require("mason-lspconfig").setup({
   ensure_installed = {
     "lua_ls",
     "pyright",
-    "tsserver"
+    "tsserver",
+    "angularls",
   }
 })
 
 local lspconfig = require('lspconfig')
-
 local lsp_defaults = lspconfig.util.default_config
 
 lsp_defaults.capabilities = vim.tbl_deep_extend(
@@ -16,7 +16,6 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
   require('cmp_nvim_lsp').default_capabilities()
 )
 
--- Lua
 require("lspconfig").lua_ls.setup {
   settings = {
     Lua = {
@@ -35,6 +34,9 @@ require("lspconfig").lua_ls.setup {
 
 -- Typescript
 require("lspconfig").tsserver.setup({})
+
+-- angular
+require("lspconfig").angularls.setup({})
 
 -- Python
 require("lspconfig").pyright.setup({

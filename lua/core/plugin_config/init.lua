@@ -21,3 +21,6 @@ require("core.plugin_config.lsp_config")
 
 -- completion engine plugin
 require("core.plugin_config.nvim-cmp")
+
+-- rest of
+require("core.plugin_config.neodev")
