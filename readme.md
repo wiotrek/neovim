@@ -21,3 +21,11 @@ left side tree of dictionaries - also you can use shortcut ctrl + n
 ```
 :NvimTreeToggles
 ```
+Place where is nvim repo
+```
+cd ~/.config/nvim
+```
+Show hidden files in nvim tree panel
+```
+H
+```
